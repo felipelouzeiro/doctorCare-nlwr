@@ -115,3 +115,16 @@ button {
   margin-inline: auto;
   object-position: 0 2rem;
 }
+
+header::before { /*cria um elemento no inicio da header*/
+  content: ""; /*com o conteúdo vazio*/
+  width: 100vw; /*ocupando 100% de largura da viewport*/
+  height: 108rem; /* e 108 de altura*/
+  background-color: var(--brand-green-light);
+  display: block;
+
+  position: absolute; /*necessário para habilitar os comandos seguintes*/
+  top: 0;
+  left: 0;
+  z-index: -1; /*altera profundidade do elemento, movendo-o para trás dos outros elementos*/
+}
