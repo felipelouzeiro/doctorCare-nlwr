@@ -1,3 +1,5 @@
+/*--GERAL--*/
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -8,33 +10,53 @@
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
   --brand-beige: hsl(39, 100%, 97%);
-
   --brand-green-light: hsl(148, 23%, 89%);
 
   font-size: 62.5%; /* 1rem = 10px */
+  
+  --nav-height: 7.2rem;
 }
 
 body {
   font-family: 'DM Sans';
   font-size: 1.6rem;
-
+  
   text-align: center;
 }
 
-header {
+.wrapper { /*classificação geral para elementos maiores*/
   width: 37.5rem;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 4.1rem;
+  padding-inline: 2.4rem;
 }
 
-h4 {
+/*---HEADER---*/
+
+header {
+  margin-top: calc(4.1rem + var(--nav-height));
+}
+
+header::before { /*cria um elemento no inicio da header*/
+  content: ""; /*com o conteúdo vazio*/
+  width: 100vw; /*ocupando 100% de largura da viewport*/
+  height: calc(108rem + var(--nav-height)); /* e 108 de altura somado ao tamanho ocupado pela navbar*/
+  background-color: var(--brand-green-light);
+  display: block;
+
+  position: absolute; /*necessário para habilitar os comandos seguintes*/
+  top: 0;
+  left: 0;
+  z-index: -1; /*altera profundidade do elemento, movendo-o para trás dos outros elementos*/
+}
+
+header h4 {
   font-size: 1.4rem;
   color: var(--primary-color);
   margin-bottom: 1.6rem;
 }
 
-h1 {
+header h1 {
   font-size: 3.4rem;
   color: var(--headline);
   line-height: 130%;
@@ -42,7 +64,7 @@ h1 {
   margin-bottom: 2.4rem;
 }
 
-p {
+header p {
   font-size: 1.8rem;
   line-height: 150%;
   font-weight: 400;
@@ -51,7 +73,7 @@ p {
   margin-bottom: 3.2rem;
 }
 
-button {
+header button {
   background: var(--primary-color);
 
   border: none;
@@ -116,15 +138,17 @@ button {
   object-position: 0 2rem;
 }
 
-header::before { /*cria um elemento no inicio da header*/
-  content: ""; /*com o conteúdo vazio*/
-  width: 100vw; /*ocupando 100% de largura da viewport*/
-  height: 108rem; /* e 108 de altura*/
-  background-color: var(--brand-green-light);
-  display: block;
+/*---NAVIGATION---*/
 
-  position: absolute; /*necessário para habilitar os comandos seguintes*/
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: var(--nav-height);
+
+  position: fixed;
   top: 0;
-  left: 0;
-  z-index: -1; /*altera profundidade do elemento, movendo-o para trás dos outros elementos*/
+  left: 50%;
+  transform: translateX(-50%);
 }
