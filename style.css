@@ -202,7 +202,7 @@ body.menu-expanded > :not(nav) { /*some com os elementos exceto a nav*/
 
 .menu,
 .close-menu,
-close-menu .open-menu {
+body.menu-expanded .open-menu {
   opacity: 0;
   visibility: hidden;
 }
