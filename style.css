@@ -50,7 +50,7 @@ header {
 }
 
 header::before { /*cria um elemento no inicio da header*/
-  content: ""; /*com o conteúdo vazio*/
+  content: ''; /*com o conteúdo vazio*/
   width: 100%; /*ocupando 100% de largura da viewport*/
   height: calc(108rem + var(--nav-height)); /* e 108 de altura somado ao tamanho ocupado pela navbar*/
   background-color: var(--brand-green-light);
@@ -261,7 +261,7 @@ body.menu-expanded nav {
 
   display: inline-block;
   padding: 16px 32px;
-  margin-top: 4.8;
+  margin-top: 4.8rem;
   margin-bottom: 8rem;
 }
 
@@ -281,7 +281,7 @@ body.menu-expanded button {
 body.menu-expanded .logo path {
   fill: white;
 }
-button
-body.menu-expanded .logo path {
+
+body.menu-expanded button path {
   stroke: white;
 }
