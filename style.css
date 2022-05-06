@@ -1,4 +1,5 @@
-/*=== GERAL =================================*/
+/*---general---*/
+
 * {
   margin: 0;
   padding: 0;
@@ -52,11 +53,43 @@ ul {
   list-style: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 section {
   padding-block: 10rem;
 }
 
-/*=== NAVIGATION =================================*/
+section header h4 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  line-height: 150%;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+
+  margin-bottom: 1.6rem;
+
+}
+
+section header h2 {
+  color: var(--headline);
+
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3.9rem;
+}
+
+section header h1 {
+  font-size: 3.4rem;
+  color: var(--headline);
+  line-height: 130%;
+
+  margin-bottom: 2.4rem;
+}
+
+/*---navigation---*/
+
 nav {
   display: flex;
 
@@ -93,7 +126,8 @@ nav button {
   cursor: pointer;
 }
 
-/*=== MENU-EXPANDED =================================*/
+/*---menu expanded---*/
+
 body.menu-expanded {
   overflow: hidden;
 }
@@ -130,7 +164,7 @@ body.menu-expanded .menu {
 
   padding-top: var(--nav-height);
 
-  transition: transform 400ms; /*aplica animação enquanto o elemento se desloca de baixo pra cima*/
+  transition: transform 300ms; /*aplica animação enquanto o elemento se desloca de baixo pra cima*/
 
   transform: translateY(0%); /*exibe elemento que estava em baixo*/
 }
@@ -191,7 +225,8 @@ body.menu-expanded button path {
   stroke: white;
 }
 
-/*=== HOME =================================*/
+/*---home---*/
+
 #home {
   padding-top: calc(4.1rem + var(--nav-height));
 }
@@ -207,20 +242,6 @@ body.menu-expanded button path {
   top: 0;
   left: 0;
   z-index: -1;
-}
-
-#home h4 {
-  font-size: 1.4rem;
-  color: var(--primary-color);
-  margin-bottom: 1.6rem;
-}
-
-#home h1 {
-  font-size: 3.4rem;
-  color: var(--headline);
-  line-height: 130%;
-
-  margin-bottom: 2.4rem;
 }
 
 #home p {
@@ -308,16 +329,6 @@ body.menu-expanded button path {
   margin-bottom: 1.6rem;
 }
 
-#services header h2 {
-  color: var(--headline);
-
-  font-weight: 700;
-  font-size: 3rem;
-  line-height: 3.9rem;
-
-  margin-bottom: 6rem;
-}
-
 #services .cards {
   display: flex;
   flex-direction: column;
@@ -336,4 +347,33 @@ body.menu-expanded button path {
 
 #services .card h3 {
   margin-block: 1.6;
+}
+
+#services header h2 {
+  margin-bottom: 6rem;
+}
+
+/*---about---*/
+
+
+#about {
+  text-align: left;
+  background-color: var(--brand-beige);
+}
+
+section .content p {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+    
+  color:  var(--headline);
+}
+
+#about header h2 {
+  margin-bottom: 2.4rem;
+}
+
+#about .content p {
+  margin-top: 2.4rem;
+  margin-bottom: 6rem;
 }

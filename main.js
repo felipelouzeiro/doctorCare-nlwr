@@ -22,6 +22,10 @@ ScrollReveal({
   #home, 
   #home img, 
   #home .stats,
+  #services,
   #services header,
-  #services .cards
+  #services .card,
+  #about,
+  #about .reader,
+  #about .content
 `)
