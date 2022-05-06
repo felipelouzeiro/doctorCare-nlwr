@@ -13,6 +13,7 @@
 
   --brand-beige: hsl(39, 100%, 97%);
   --brand-light: hsl(148, 23%, 89%);
+  --brand-dark: hsl(170, 100%, 14%);
 
   --bg-light: hsl(180, 14%, 97%);
 
@@ -86,6 +87,43 @@ section header h1 {
   line-height: 130%;
 
   margin-bottom: 2.4rem;
+}
+
+section .content p {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+    
+  color:  var(--headline);
+}
+
+.button {
+  background: var(--primary-color);
+
+  border: none;
+  border-radius: 4rem;
+
+  margin-bottom: 6rem;
+
+  padding: 1.6rem 3.2rem;
+  width: fit-content; /*largura se limita ao conteudo*/
+
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+
+  transition: background 200ms;
+}
+
+.button:hover {
+  background-color: var(--brand-dark);
 }
 
 /*---navigation---*/
@@ -253,31 +291,6 @@ body.menu-expanded button path {
   margin-bottom: 3.2rem;
 }
 
-#home button {
-  background: var(--primary-color);
-
-  border: none;
-  border-radius: 4rem;
-
-  margin-bottom: 6rem;
-
-  height: 6.2rem;
-  width: 26.3rem;
-
-  color: white;
-  font-size: 1.4rem;
-  font-weight: 700;
-  text-transform: uppercase;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.6rem;
-
-  margin-right: auto;
-  margin-left: auto;
-}
-
 #home img {
   width: 26.4rem;
   display: block;
@@ -313,6 +326,10 @@ body.menu-expanded button path {
   color: var(--primary-color);
   font-size: 1.6rem;
   line-height: 150%;
+}
+
+#home .button {
+  margin-inline: auto;
 }
 
 /*---services---*/
@@ -361,13 +378,6 @@ body.menu-expanded button path {
   background-color: var(--brand-beige);
 }
 
-section .content p {
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 150%;
-    
-  color:  var(--headline);
-}
 
 #about header h2 {
   margin-bottom: 2.4rem;
@@ -376,4 +386,27 @@ section .content p {
 #about .content p {
   margin-top: 2.4rem;
   margin-bottom: 6rem;
+}
+
+/*---contact---*/
+
+#about {
+  text-align: left;
+}
+
+#contact {
+  margin-bottom: 3.2rem;
+}
+#contact ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  
+  margin-bottom: 3.2rem;
+}
+
+#contact ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
 }
