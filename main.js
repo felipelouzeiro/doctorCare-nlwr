@@ -1,3 +1,5 @@
+window.addEventListener('scroll', onScroll);
+
 function onScroll() {
   if(scrollY > 0){ // 'scrollY' indica a posição do scroll
     navigation.classList.add('scroll');
