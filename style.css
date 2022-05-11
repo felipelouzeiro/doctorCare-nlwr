@@ -472,3 +472,46 @@ footer .social-links {
   visibility: visible;
   transform: translateY(0);
 }
+
+/*=== RESPONSIVE =================================*/
+
+@media (min-width: 1024px) {
+  /*=== GERAL =================================*/
+  .wrapper {
+    width: min(112rem, 100%);
+  }
+  /*=== NAVIGATION =================================*/
+
+  nav#navigation .wrapper * {
+    margin: 0;
+    padding: 0;
+    visibility: initial;
+    display: initial;
+    opacity: initial;
+    flex-direction: initial;
+    position: initial;
+    font-size: initial;
+    transform: initial;
+    color: initial;
+    background-color: initial;
+    font-weight: initial;
+  }
+
+  nav#navigation .close-menu,
+  nav#navigation .social-links,
+  nav#navigation .open-menu {
+    display: none;
+  }
+
+  nav#navigation .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+  }
+
+  nav#navigation .menu ul:nth-child(1) {
+    display: flex;
+    gap: 3.2rem;
+  }
+}
